@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustentabilidad y Desarrollo Sostenible | Portal Educativo Avanzado</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        eco: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        vibrant: {
+                            amber: '#f59e0b',
+                            coral: '#ff6b6b',
+                            teal: '#0ea5e9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Personalización de detalles decorativos */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #115e59 0%, #15803d 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Quitar flecha por defecto de <details> y poner una personalizada */
+        details summary::-webkit-details-marker { display: none; }
+        details summary { list-style: none; }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 selection:bg-eco-200 selection:text-eco-900 overflow-x-hidden">
+
+    <!-- Barra de Navegación Fija -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-eco-600 rounded-xl text-white shadow-md shadow-eco-600/20">
+                    <i class="fa-solid fa-seedling text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900 block leading-none">GEODESARROLLO</span>
+                    <span class="text-xs font-semibold text-eco-600 uppercase tracking-widest mt-0.5 block">Sustentabilidad Plena</span>
+                </div>
+            </div>
+            
+            <!-- Menú de navegación de escritorio -->
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="#inicio" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">Inicio</a>
+                <a href="#concepto" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">Concepto</a>
+                <a href="#dimensiones" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">Dimensiones</a>
+                <a href="#principios" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">Principios</a>
+                <a href="#recursos" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">Recursos</a>
+                <a href="#ods" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-eco-600 hover:bg-slate-50 transition-all">ODS 2030</a>
+            </div>
+
+            <div class="flex items-center">
+                <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-eco-700 hover:bg-eco-800 shadow-md shadow-eco-700/10 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Actuar Ahora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Héroe Principal (Hero Section) Amplio con Imagen de Fondo de Alta Calidad -->
+    <header id="inicio" class="relative min-h-[90vh] flex items-center justify-center bg-slate-900 overflow-hidden pt-12">
+        <!-- Fondo de imagen optimizado usando Unsplash (Bosque cubierto de niebla y luz solar) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=2000&q=80" alt="Naturaleza y Sustentabilidad" class="w-full h-full object-cover object-center opacity-40 scale-105 animate-[pulse_8s_infinite_alternate]">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-transparent"></div>
+            <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <div class="inline-flex items-center space-x-2 bg-eco-500/10 border border-eco-500/30 rounded-full px-4 py-1.5 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-eco-400 animate-ping"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-eco-300">Tema 5 • Unidad Geográfica Avanzada</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-serif">
+                    Sustentabilidad y <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-eco-400 via-emerald-300 to-vibrant-amber">Desarrollo Sostenible</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-xl font-light leading-relaxed">
+                    Un marco integral para comprender el equilibrio crítico entre el progreso socioeconómico humano, la preservación ecológica y la justicia social en un planeta con recursos finitos.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#concepto" class="px-8 py-4 rounded-xl font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-lg transform hover:-translate-y-0.5">
+                        Explorar Contenido <i class="fa-solid fa-arrow-down ml-2 text-eco-600"></i>
+                    </a>
+                    <a href="#dimensiones" class="px-8 py-4 rounded-xl font-bold text-sm bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 transition-all backdrop-blur-sm">
+                        Ver las 3 Dimensiones
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panel de Acceso Rápido Flotante -->
+            <div class="lg:col-span-5">
+                <div class="glass-card border border-white/20 rounded-3xl p-8 shadow-2xl shadow-black/20 text-slate-900 transform lg:rotate-1 hover:rotate-0 transition-transform duration-500">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-list-check text-eco-600 mr-3"></i> Índice del Módulo
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#concepto" class="flex items-center p-3 rounded-xl hover:bg-eco-50 border border-transparent hover:border-eco-100 transition-all group">
+                            <span class="w-8 h-8 rounded-lg bg-eco-100 group-hover:bg-eco-600 text-eco-700 group-hover:text-white flex items-center justify-center font-bold text-sm transition-all">01</span>
+                            <span class="ml-3 font-medium text-slate-700 group-hover:text-slate-900">Concepto Esencial</span>
+                            <i class="fa-solid fa-chevron-right ml-auto text-slate-400 group-hover:text-eco-600 transition-all text-xs"></i>
+                        </a>
+                        <a href="#dimensiones" class="flex items-center p-3 rounded-xl hover:bg-eco-50 border border-transparent hover:border-eco-100 transition-all group">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-100 group-hover:bg-emerald-600 text-emerald-700 group-hover:text-white flex items-center justify-center font-bold text-sm transition-all">02</span>
+                            <span class="ml-3 font-medium text-slate-700 group-hover:text-slate-900">Dimensiones del Desarrollo</span>
+                            <i class="fa-solid fa-chevron-right ml-auto text-slate-400 group-hover:text-eco-600 transition-all text-xs"></i>
+                        </a>
+                        <a href="#principios" class="flex items-center p-3 rounded-xl hover:bg-eco-50 border border-transparent hover:border-eco-100 transition-all group">
+                            <span class="w-8 h-8 rounded-lg bg-amber-100 group-hover:bg-amber-600 text-amber-700 group-hover:text-white flex items-center justify-center font-bold text-sm transition-all">03</span>
+                            <span class="ml-3 font-medium text-slate-700 group-hover:text-slate-900">Principios Rectores</span>
+                            <i class="fa-solid fa-chevron-right ml-auto text-slate-400 group-hover:text-eco-600 transition-all text-xs"></i>
+                        </a>
+                        <a href="#recursos" class="flex items-center p-3 rounded-xl hover:bg-eco-50 border border-transparent hover:border-eco-100 transition-all group">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 group-hover:bg-sky-600 text-sky-700 group-hover:text-white flex items-center justify-center font-bold text-sm transition-all">04</span>
+                            <span class="ml-3 font-medium text-slate-700 group-hover:text-slate-900">Uso Responsable de Recursos</span>
+                            <i class="fa-solid fa-chevron-right ml-auto text-slate-400 group-hover:text-eco-600 transition-all text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Módulo 1: Concepto de Sustentabilidad Ampliado -->
+    <section id="concepto" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Imagen conceptual hermosa -->
+            <div class="lg:col-span-5 relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-eco-600 to-vibrant-teal rounded-3xl blur-xl opacity-30 group-hover:opacity-40 transition duration-500"></div>
+                <div class="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Equilibrio de Recursos Naturales" class="w-full h-[450px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent p-6 text-white">
+                        <span class="text-xs font-bold text-eco-300 tracking-wider uppercase">Perspectiva Global</span>
+                        <h4 class="text-lg font-bold font-serif mt-1">Ecosistemas en Armonía Crítica</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido textual profundo -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="flex items-center space-x-2 text-eco-600">
+                    <span class="h-px w-8 bg-eco-600"></span>
+                    <span class="text-sm font-bold uppercase tracking-widest">Sección 01</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-serif">
+                    El Concepto de <span class="gradient-text">Sustentabilidad</span>
+                </h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                    <p class="font-medium text-slate-900 text-lg">
+                        La sustentabilidad no es simplemente la protección pasiva del medio ambiente; es un modelo sistémico de desarrollo dinámico.
+                    </p>
+                    <p>
+                        Formalizado originalmente en el <span class="font-semibold text-slate-900">Informe Brundtland (1987)</span>, se define como la capacidad de satisfacer las demandas de la sociedad contemporánea sin vulnerar la viabilidad y supervivencia de las generaciones venideras. 
+                    </p>
+                    <p>
+                        Esto exige transicionar de una economía lineal extractivista (tomar, hacer, desechar) hacia sistemas cerrados inspirados en los ciclos de la naturaleza, garantizando que la tasa de consumo de recursos renovables no supere su tasa de regeneración natural.
+                    </p>
+                </div>
+                
+                <!-- Tarjeta informativa interna -->
+                <div class="p-5 rounded-2xl bg-gradient-to-br from-eco-50 to-emerald-50/50 border border-eco-100 flex items-start space-x-4">
+                    <div class="p-3 bg-white rounded-xl text-eco-600 shadow-sm">
+                        <i class="fa-solid fa-circle-info text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Diferencia Clave:</h4>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            <strong>Sustentabilidad:</strong> Enfocada en la conservación y defensa interna de los recursos naturales del ecosistema.<br>
+                            <strong>Sostenibilidad:</strong> Abarca los procesos globales (sociales, institucionales y económicos) para mantener el sistema a largo plazo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulo 2: Dimensiones con Colores Llamativos e Impacto Visual -->
+    <section id="dimensiones" class="py-24 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-4 py-1.5 rounded-full border border-emerald-400/20">Sección 02 • Los Tres Pilares</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-serif">
+                    Las Dimensiones Fundamentales
+                </h2>
+                <p class="text-slate-400 text-base font-light">
+                    El éxito del desarrollo sostenible radica en la intersección perfecta e inseparable de tres ejes estratégicos. Si uno de ellos falla, la estructura colapsa.
+                </p>
+            </div>
+
+            <!-- Grid Tripartito de Alta Visibilidad y Colores Llamativos -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Dimensión Ambiental -->
+                <div class="relative group bg-slate-800/50 border border-slate-700/60 rounded-3xl p-8 hover:bg-slate-800 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-eco-600/10 rounded-full blur-2xl group-hover:bg-eco-600/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-eco-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-eco-500/20 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif mb-3 text-white group-hover:text-eco-400 transition-colors">Dimensión Ambiental</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Garantiza la resiliencia climática y la integridad ecosistémica. Su objetivo central es preservar el capital natural global, controlando la degradación de suelos, garantizando la pureza hídrica, deteniendo la pérdida masiva de biodiversidad y minimizando la huella ecológica antropogénica.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                        <li><i class="fa-solid fa-check text-eco-400 mr-2"></i>Descarbonización de la matriz energética</li>
+                        <li><i class="fa-solid fa-check text-eco-400 mr-2"></i>Conservación de áreas naturales protegidas</li>
+                    </ul>
+                </div>
+
+                <!-- Dimensión Social -->
+                <div class="relative group bg-slate-800/50 border border-slate-700/60 rounded-3xl p-8 hover:bg-slate-800 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-vibrant-teal/10 rounded-full blur-2xl group-hover:bg-vibrant-teal/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-vibrant-teal text-white flex items-center justify-center text-2xl shadow-lg shadow-vibrant-teal/20 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif mb-3 text-white group-hover:text-sky-400 transition-colors">Dimensión Social</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Pone al ser humano en el centro del desarrollo. Aborda de manera directa la equidad distributiva, la erradicación multidimensional de la pobreza, el fortalecimiento de la justicia social, el acceso universal y digno a la salud y educación, y la equidad de género en todas las esferas públicas.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                        <li><i class="fa-solid fa-check text-sky-400 mr-2"></i>Cohesión social y participación ciudadana</li>
+                        <li><i class="fa-solid fa-check text-sky-400 mr-2"></i>Reducción sistemática de brechas sociales</li>
+                    </ul>
+                </div>
+
+                <!-- Dimensión Económica -->
+                <div class="relative group bg-slate-800/50 border border-slate-700/60 rounded-3xl p-8 hover:bg-slate-800 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-vibrant-amber/10 rounded-full blur-2xl group-hover:bg-vibrant-amber/20 transition-all"></div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-vibrant-amber text-white flex items-center justify-center text-2xl shadow-lg shadow-vibrant-amber/20 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif mb-3 text-white group-hover:text-amber-400 transition-colors">Dimensión Económica</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Redefine el crecimiento financiero clásico. Promueve la creación de riqueza de forma éticamente responsable, la rentabilidad corporativa basada en criterios ASG (Ambiental, Social y Gobernanza), el empleo verde y digno, y la inversión en innovación tecnológica ecoeficiente.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Modelos eficientes de Bioeconomía</li>
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Internalización de costos ambientales</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Gráfico / Imagen Representativa de la Intersección (Concepto de Co-dependencia) -->
+            <div class="mt-16 bg-gradient-to-r from-slate-800 via-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-4 text-center lg:text-left">
+                    <h4 class="text-xl font-bold font-serif mb-2 text-white">La Zona Sostenible Real</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Cuando estos tres pilares se sobreponen correctamente, surgen subzonas esenciales: lo <strong>Soportable</strong> (Social + Ambiental), lo <strong>Viable</strong> (Ambiental + Económico) y lo <strong>Equitativo</strong> (Social + Económico).
+                    </p>
+                </div>
+                <div class="lg:col-span-8 overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" alt="Economía Circular y Sostenibilidad" class="w-full h-48 object-cover filter brightness-90 hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Módulo 3: Principios del Desarrollo Sostenible (Acordeón Dinámico Profesional) -->
+    <section id="principios" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-eco-700">Sección 03 • Directrices Éticas</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
+                Principios Universales del <span class="gradient-text">Desarrollo Sostenible</span>
+            </h2>
+            <p class="text-slate-600 text-sm">
+                Haz clic en cada principio conceptual para expandir su análisis normativo fundamental.
+            </p>
+        </div>
+
+        <!-- Acordeón Limpio Implementado Exclusivamente en HTML5 y Tailwind -->
+        <div class="space-y-4">
+            
+            <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm [&_summary::-webkit-details-marker]:hidden" open>
+                <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-eco-700 transition-colors">1. Principio de Precaución (Criterio de Cautela)</h3>
+                    </div>
+                    <span class="w-8 h-8 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </span>
+                </summary>
+                <div class="mt-4 pl-14 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Establece que cuando exista una amenaza de daño grave, irreversible o catastrófico para el ecosistema global, la ausencia de una certeza científica absoluta no debe utilizarse como justificación o pretexto para postergar la adopción de medidas preventivas eficaces y oportunas.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-eco-700 transition-colors">2. Principio de Interdependencia e Integración</h3>
+                    </div>
+                    <span class="w-8 h-8 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </span>
+                </summary>
+                <div class="mt-4 pl-14 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Reconoce formalmente que los sistemas biofísicos de la Tierra, las estructuras económicas globales y las comunidades humanas no funcionan de manera aislada. Cualquier alteración en un eje geográfico repercute directamente en la estabilidad de los demás componentes planetarios.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-eco-50 text-eco-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-eco-700 transition-colors">3. Principio de Eficiencia, Mesura y Capacidad de Carga</h3>
+                    </div>
+                    <span class="w-8 h-8 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </span>
+                </summary>
+                <div class="mt-4 pl-14 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Determina límites físicos precisos: la tasa de extracción de recursos naturales no debe rebasar bajo ningún concepto el ritmo de regeneración biológica natural del recurso, y la tasa de vertido de residuos contaminantes debe ser estrictamente menor a la capacidad de asimilación ecológica del medio.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-eco-700 transition-colors">4. Principio de Equidad Intergeneracional</h3>
+                    </div>
+                    <span class="w-8 h-8 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </span>
+                </summary>
+                <div class="mt-4 pl-14 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Un mandato moral y ético que exige a la generación actual gestionar el patrimonio natural y social del planeta de tal modo que las generaciones futuras tengan el derecho inalienable de disfrutar de las mismas oportunidades de desarrollo y bienestar ecosistémico que nosotros.
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- Módulo 4: Uso Responsable de Recursos (Sección Interactiva Ampliada) -->
+    <section id="recursos" class="py-24 bg-slate-100 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16 gap-4">
+                <div class="max-w-2xl">
+                    <span class="text-xs font-bold uppercase tracking-widest text-eco-700">Sección 04 • Gestión Estratégica</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif mt-1">
+                        Uso Responsable y Eficiente de Recursos
+                    </h2>
+                    <p class="text-slate-600 text-sm mt-2">
+                        Estrategias operativas inmediatas para mitigar la huella de carbono y potenciar los ciclos biológicos sustentables.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid de Estrategias con Diseño Moderno -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Estrategia 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between group hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Energías Renovables</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Sustituir de manera urgente los combustibles fósiles por fuentes limpias (solar, eólica, geotérmica), disminuyendo drásticamente las emisiones globales de GEI.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-amber-600 tracking-wider uppercase mt-6 block">Mitigación Climática</span>
+                </div>
+
+                <!-- Estrategia 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between group hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-eco-100 text-eco-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Economía Circular</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Superar el desperdicio industrial mediante el ecodiseño, potenciando al máximo las 3R (Reducir, Reutilizar y Reciclar) para reincorporar subproductos a las cadenas de valor.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-eco-600 tracking-wider uppercase mt-6 block">Ciclo de Vida Ampliado</span>
+                </div>
+
+                <!-- Estrategia 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between group hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Huella Hídrica Crítica</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Optimizar los distritos de riego agrícolas, implementar la captación pluvial urbana a gran escala y restaurar plantas de tratamiento biológico de aguas residuales.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-sky-600 tracking-wider uppercase mt-6 block">Seguridad Hídrica</span>
+                </div>
+
+                <!-- Estrategia 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between group hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Consumo Sostenible</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Fomentar la adquisición preferencial de insumos certificados localmente, apoyando redes agroecológicas justas que reduzcan los costos logísticos y de transporte.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-purple-600 tracking-wider uppercase mt-6 block">Responsabilidad Ciudadana</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Módulo Adicional: Agenda ODS 2030 de la ONU (Información de Alto Valor Académico) -->
+    <section id="ods" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-vibrant-amber bg-amber-400/10 px-3 py-1 rounded-md">Marco Institucional Internacional</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
+                    La Agenda 2030 y los <span class="gradient-text">Objetivos de Desarrollo Sostenible</span>
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Adoptada unánimemente por los Estados Miembros de las Naciones Unidas en 2015, la Agenda 2030 representa la hoja de ruta geopolítica y científica más ambiciosa de la humanidad. Se compone de <strong class="text-slate-900">17 Objetivos (ODS)</strong> y 169 metas específicas orientadas de manera integrada a erradicar la pobreza, blindar el planeta contra el colapso climático y asegurar una prosperidad compartida duradera.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="border-l-2 border-eco-600 pl-3">
+                        <span class="block text-xl font-bold text-slate-900">17</span>
+                        <span class="text-xs text-slate-500">Objetivos Globales</span>
+                    </div>
+                    <div class="border-l-2 border-vibrant-teal pl-3">
+                        <span class="block text-xl font-bold text-slate-900">169</span>
+                        <span class="text-xs text-slate-500">Metas Medibles</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-6">
+                <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=800&q=80" alt="Sustentabilidad Científica e Innovación" class="w-full h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto / Sección de Compromiso Ecológico -->
+    <section id="contacto" class="py-24 bg-gradient-to-br from-eco-800 to-slate-950 text-white relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold font-serif">¿Listo para marcar la diferencia?</h2>
+            <p class="text-slate-300 text-sm max-w-xl mx-auto font-light leading-relaxed">
+                Suscríbete para recibir guías académicas avanzadas, análisis cartográficos y propuestas comunitarias sobre sustentabilidad ambiental.
+            </p>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por comprometerte con el desarrollo sustentable!');" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <input type="email" placeholder="Introduce tu correo electrónico institucional" required class="flex-grow px-5 py-3.5 rounded-xl text-slate-900 placeholder-slate-400 font-medium focus:outline-none focus:ring-2 focus:ring-eco-500 border-none text-sm">
+                <button type="submit" class="px-6 py-3.5 bg-eco-600 hover:bg-eco-500 active:bg-eco-700 font-bold text-sm rounded-xl transition-all shadow-md shadow-eco-600/20 whitespace-nowrap">
+                    Unirse a la Red
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de Página Premium con Datos del Alumno Integrados Profesionalmente -->
+    <footer class="bg-slate-950 text-slate-500 text-xs py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="text-slate-400 font-bold text-sm uppercase tracking-tight">Geodesarrollo Sostenible</span>
+                <span class="text-slate-700">|</span>
+                <span>Módulo de Aprendizaje 2026</span>
+            </div>
+            
+            <!-- Datos solicitados implícitamente por el contexto educativo del estudiante -->
+            <div class="text-center md:text-right space-y-1">
+                <p class="text-slate-300 font-semibold tracking-wide">Elaborado por: <span class="text-eco-400">Jose Alberto Peralta Hernandez</span></p>
+                <p class="text-[10px] text-slate-500 uppercase tracking-widest font-medium">Grupo Académico: 4°B</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-900/60 text-center text-[10px] text-slate-600">
+            &copy; 2026 Portal de Educación Geográfica y Social. Todos los derechos reservados bajo criterios de Código de Honor.
+        </div>
+    </footer>
+
+</body>
+</html>
